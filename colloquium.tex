@@ -105,8 +105,9 @@ p^2 + 2pq + q^2 &= 1
  Then:
 \begin{align*}
 Pr(T_n = t) &= \lambda_n e^{-\lambda_nt}\\
-\lambda_n &= \binom{n}{2}\frac{1}{N}
+\lambda_n &= \binom{n}{2}\frac{1}{N} = \binom{n}{2}\frac{1}{N_e\tau}
 \end{align*}
+where $N_e$ is the effective population size and $\tau$ is the generation time.
 Let $T_{\text{mrca}}$ denote the age of the most recent common ancestor:
 \begin{align*}
  \mathbb{E}[T_{\text{mrca}}] &= \mathbb{E}[T_n] + \mathbb{E}[T_{n-1}] + \ldots + \mathbb{E}[T_2]\\
@@ -221,8 +222,8 @@ See~\cite{steel2014} for a gentle introduction to phylogenetic trees, specially 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Tree surgery...}
-Let $Y \subset X$. Then call $X'$ the $Y$-tree that has internal nodes compatible with those in $T$, i.e., $X'$ is a \textit{subtree} of $X$
-An Subtree-prune and re-graft (SPR) operation on a tree $T$ detaches $X'$ and re-grafts it onto another node in the tree.
+Let $Y \subset X$. Then call $X'$ the $Y$-tree that has internal nodes compatible with those in $T$, i.e., $X'$ is a \textit{subtree} of $X$.
+An subtree-prune and re-graft (SPR) operation on a tree $T$ detaches $X'$ and re-grafts it onto another node in the tree.
 \begin{center}
  \begin{figure}
   \includegraphics[scale=0.5]{FIGURES/two_sprs.jpg}
@@ -236,7 +237,7 @@ An Subtree-prune and re-graft (SPR) operation on a tree $T$ detaches $X'$ and re
  \begin{center}
   \begin{figure}
    \includegraphics[scale=0.35]{FIGURES/spr_graph.jpg}
-   \caption{The neighbourhood of $T$ in the SPR graph~\citep{whidden2015}}
+   \caption{The neighbourhood of $T$ in the SPR graph ($G(n)$)~\citep{whidden2015}}
   \end{figure}
    The diameter is \textcolor{red}{$n - \Theta(\sqrt{n})$} and the average degree is \textcolor{red}{$2(n-3)(2n-7)$}.
  \end{center}
@@ -244,13 +245,13 @@ An Subtree-prune and re-graft (SPR) operation on a tree $T$ detaches $X'$ and re
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Ricci-Ollivier curvature~\citep{whidden2015}}
- When performing a random-walk in a metric space, it is convenient to rigorously define a measure of ``curvature'', that is, how ``difficult'' it is to go from $x$ to $y$~\citep{ollivier2009}.
- \cite{whidden2015} consider two points $x$ and $y$ on the SPR graph ($G$).
- Let $m_x$ and $m_y$ be the probability masses of the positions $x$ and $y$ on $G$ after some (finite) time. Then:
+ With a random-walk in a metric space, we can define ``curvature'', that is, how ``difficult'' it is to go from $x$ to $y$~\citep{ollivier2009} as follows:
+%  \cite{whidden2015} consider two points $x$ and $y$ on the SPR graph ($G$).
+ let $m_x$ and $m_y$ be the probability masses of the positions $x$ and $y$ on $G(n)$ after some (finite) time. Then:
  \begin{equation}
  W_1(m_x, m_y) := \min_{\xi \in \Pi(m_x, m_y)} \sum_{\{z,w\} \subset V} d(z,w) \xi(z,w)
  \end{equation}
-which loosely measures how much ``work'' is involved in moving $m_x$ to $m_y$ along $G$.
+% which loosely measures how much ``work'' is involved in moving $m_x$ to $m_y$ along $G$.
 The so-called coarse Ricci-Ollivier curvature of $x$ and $y$ is then:
 \begin{equation}
 \kappa(m; x, y) := 1 - \frac{W_1(m_x, m_y)}{d(x, y)}.
@@ -265,18 +266,15 @@ Here, for two trees $T$ and $S$, $d(T,S)$ is how many SPR operations are needed 
  \begin{equation}
  \frac{-2}{d(T,S)} \le \kappa(T,S) \le \frac{2}{d(T,S)}
  \end{equation}
- Moreover, if $T$ and $S$ are adjacent (with $|T| = |S| = n$), the the maximum curvature is 
+ Moreover, if $T$ and $S$ are adjacent (with $|T| = |S| = n$), the the maximum curvature of the uniform random-walk is 
  \begin{equation}
   \frac{6n-17}{3n^2-13n+14}
  \end{equation}
 \textit{Conjecture~\citep{whidden2015}: Let $k_n$ be the maximum curvature between two trees with $n$-leaves.
 	Then:
-	\begin{center}
-	 \begin{itemize}
-		\item $k_n \le \frac{2}{D(n)-1}$, and
-		\item $\lim_{n\rightarrow\infty} k_n  = \frac{2}{D(n)-1}$.
-	\end{itemize}
-	\end{center}
+	\begin{equation}
+	 k_n \le \frac{2}{D(n)-1}
+	\end{equation}
 }
 where $D(n)$ is the diameter of the SPR graph on $n$-leaves trees.
 \end{frame}
@@ -314,7 +312,7 @@ where $D(n)$ is the diameter of the SPR graph on $n$-leaves trees.
 \begin{itemize}
  \item Thanks a bunch for watching!
  \item I am grateful to the organising committee for the invitation;
- \item Special thanks to Andrew Rambaut (Edinburgh), \underline{Mike Steel} (Cantenbury, NZ), Patrice Showers Corneli (Utah) and \underline{Erick Matsen} (Hutchson)\footnote{Mathematicians are underlined.}.
+ \item Special thanks to Andrew Rambaut (Edinburgh), \underline{Mike Steel} (Cantenbury, NZ), Patrice Showers Corneli (Utah), \underline{Erick Matsen} (Hutchson) and \underline{Felipe Figueiredo} (PROCC)\footnote{Mathematicians are underlined.}.
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
