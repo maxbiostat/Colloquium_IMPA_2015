@@ -1,6 +1,6 @@
 # Colloquium_IMPA_2015
 My presentation at the 30th Brazilian Mathematics Colloquium at the National Institute of Pure and Applied Mathematics (IMPA).
-If you speak Portuguese, you may want to look at the [video](https://www.youtube.com/watch?v=xcXjh0CdkLA) of the talk, which fortunately includes mostly the slides, with only a brief appearance of my (not!) beautiful self.
+If you speak Portuguese, you may want to look at the [video](https://www.youtube.com/watch?v=xcXjh0CdkLA) of the talk, which fortunately includes mostly the [slides](https://github.com/maxbiostat/Colloquium_IMPA_2015/blob/master/lmcarvalho_phylo.pdf), with only a brief appearance of my (not!) beautiful self.
 
 I am specially grateful to my mathematician friends [Erick Matsen](https://github.com/matsen), [Mike Steel](http://www.math.canterbury.ac.nz/~m.steel/) and [Felipe Figueiredo](https://github.com/philsf) for insights and proof-reading.
 
