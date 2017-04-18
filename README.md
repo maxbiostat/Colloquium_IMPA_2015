@@ -6,12 +6,12 @@ I am specially grateful to my mathematician friends [Erick Matsen](https://githu
 
 Here are some links I found extremely useful when preparing this talk:
 
-http://i.imgur.com/T5XLPLB.jpg
+- http://i.imgur.com/T5XLPLB.jpg
 
-http://www.math.canterbury.ac.nz/~m.steel/files/presentations/winthrop1_to_4.pdf
+- http://www.math.canterbury.ac.nz/~m.steel/files/presentations/winthrop1_to_4.pdf
 
-http://www.math.canterbury.ac.nz/~m.steel/files/presentations/winthrop5_to_10.pdf
+- http://www.math.canterbury.ac.nz/~m.steel/files/presentations/winthrop5_to_10.pdf
 
-http://www.phylobabble.org/t/the-interface-between-mathematics-statistics-and-phylogenetics-topics-for-a-talk/537
+- http://www.phylobabble.org/t/the-interface-between-mathematics-statistics-and-phylogenetics-topics-for-a-talk/537
 
 For more, please look at the list of [references](https://github.com/maxbiostat/Colloquium_IMPA_2015/blob/master/colloquium_refs.bib) of the talk.
